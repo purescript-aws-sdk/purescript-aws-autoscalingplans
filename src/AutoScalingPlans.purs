@@ -20,27 +20,33 @@ import Data.StrMap as StrMap
 import AWS.Request as Request
 import AWS.Request.Types as Types
 
-serviceName = "AutoScalingPlans" :: String
-
 
 -- | <p>Creates a scaling plan.</p> <p>A scaling plan contains a set of instructions used to configure dynamic scaling for the scalable resources in your application. AWS Auto Scaling creates target tracking scaling policies based on the scaling instructions in your scaling plan.</p>
 createScalingPlan :: forall eff. CreateScalingPlanRequest -> Aff (exception :: EXCEPTION | eff) CreateScalingPlanResponse
-createScalingPlan = Request.request serviceName "createScalingPlan" 
+createScalingPlan = Request.request service method  where
+    service = Request.ServiceName "AutoScalingPlans"
+    method = Request.MethodName "createScalingPlan"
 
 
 -- | <p>Deletes the specified scaling plan.</p>
 deleteScalingPlan :: forall eff. DeleteScalingPlanRequest -> Aff (exception :: EXCEPTION | eff) DeleteScalingPlanResponse
-deleteScalingPlan = Request.request serviceName "deleteScalingPlan" 
+deleteScalingPlan = Request.request service method  where
+    service = Request.ServiceName "AutoScalingPlans"
+    method = Request.MethodName "deleteScalingPlan"
 
 
 -- | <p>Describes the scalable resources in the specified scaling plan.</p>
 describeScalingPlanResources :: forall eff. DescribeScalingPlanResourcesRequest -> Aff (exception :: EXCEPTION | eff) DescribeScalingPlanResourcesResponse
-describeScalingPlanResources = Request.request serviceName "describeScalingPlanResources" 
+describeScalingPlanResources = Request.request service method  where
+    service = Request.ServiceName "AutoScalingPlans"
+    method = Request.MethodName "describeScalingPlanResources"
 
 
 -- | <p>Describes the specified scaling plans or all of your scaling plans.</p>
 describeScalingPlans :: forall eff. DescribeScalingPlansRequest -> Aff (exception :: EXCEPTION | eff) DescribeScalingPlansResponse
-describeScalingPlans = Request.request serviceName "describeScalingPlans" 
+describeScalingPlans = Request.request service method  where
+    service = Request.ServiceName "AutoScalingPlans"
+    method = Request.MethodName "describeScalingPlans"
 
 
 -- | <p>Represents an application source.</p>
