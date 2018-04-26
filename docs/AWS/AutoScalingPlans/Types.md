@@ -10,7 +10,7 @@ options :: Options
 
 ``` purescript
 newtype ApplicationSource
-  = ApplicationSource { "CloudFormationStackARN" :: NullOrUndefined (XmlString) }
+  = ApplicationSource { "CloudFormationStackARN" :: Maybe (XmlString) }
 ```
 
 <p>Represents an application source.</p>
@@ -35,7 +35,7 @@ Constructs ApplicationSource from required parameters
 #### `newApplicationSource'`
 
 ``` purescript
-newApplicationSource' :: ({ "CloudFormationStackARN" :: NullOrUndefined (XmlString) } -> { "CloudFormationStackARN" :: NullOrUndefined (XmlString) }) -> ApplicationSource
+newApplicationSource' :: ({ "CloudFormationStackARN" :: Maybe (XmlString) } -> { "CloudFormationStackARN" :: Maybe (XmlString) }) -> ApplicationSource
 ```
 
 Constructs ApplicationSource's fields from required parameters
@@ -60,7 +60,7 @@ Encode ApplicationSources
 
 ``` purescript
 newtype ConcurrentUpdateException
-  = ConcurrentUpdateException { "Message" :: NullOrUndefined (ErrorMessage) }
+  = ConcurrentUpdateException { "Message" :: Maybe (ErrorMessage) }
 ```
 
 <p>Concurrent updates caused an exception, for example, if you request an update to a scaling plan that already has a pending update.</p>
@@ -85,7 +85,7 @@ Constructs ConcurrentUpdateException from required parameters
 #### `newConcurrentUpdateException'`
 
 ``` purescript
-newConcurrentUpdateException' :: ({ "Message" :: NullOrUndefined (ErrorMessage) } -> { "Message" :: NullOrUndefined (ErrorMessage) }) -> ConcurrentUpdateException
+newConcurrentUpdateException' :: ({ "Message" :: Maybe (ErrorMessage) } -> { "Message" :: Maybe (ErrorMessage) }) -> ConcurrentUpdateException
 ```
 
 Constructs ConcurrentUpdateException's fields from required parameters
@@ -174,7 +174,7 @@ Constructs CreateScalingPlanResponse's fields from required parameters
 
 ``` purescript
 newtype CustomizedScalingMetricSpecification
-  = CustomizedScalingMetricSpecification { "MetricName" :: MetricName, "Namespace" :: MetricNamespace, "Dimensions" :: NullOrUndefined (MetricDimensions), "Statistic" :: MetricStatistic, "Unit" :: NullOrUndefined (MetricUnit) }
+  = CustomizedScalingMetricSpecification { "MetricName" :: MetricName, "Namespace" :: MetricNamespace, "Dimensions" :: Maybe (MetricDimensions), "Statistic" :: MetricStatistic, "Unit" :: Maybe (MetricUnit) }
 ```
 
 <p>Represents a customized metric for a target tracking policy.</p>
@@ -199,7 +199,7 @@ Constructs CustomizedScalingMetricSpecification from required parameters
 #### `newCustomizedScalingMetricSpecification'`
 
 ``` purescript
-newCustomizedScalingMetricSpecification' :: MetricName -> MetricNamespace -> MetricStatistic -> ({ "MetricName" :: MetricName, "Namespace" :: MetricNamespace, "Dimensions" :: NullOrUndefined (MetricDimensions), "Statistic" :: MetricStatistic, "Unit" :: NullOrUndefined (MetricUnit) } -> { "MetricName" :: MetricName, "Namespace" :: MetricNamespace, "Dimensions" :: NullOrUndefined (MetricDimensions), "Statistic" :: MetricStatistic, "Unit" :: NullOrUndefined (MetricUnit) }) -> CustomizedScalingMetricSpecification
+newCustomizedScalingMetricSpecification' :: MetricName -> MetricNamespace -> MetricStatistic -> ({ "MetricName" :: MetricName, "Namespace" :: MetricNamespace, "Dimensions" :: Maybe (MetricDimensions), "Statistic" :: MetricStatistic, "Unit" :: Maybe (MetricUnit) } -> { "MetricName" :: MetricName, "Namespace" :: MetricNamespace, "Dimensions" :: Maybe (MetricDimensions), "Statistic" :: MetricStatistic, "Unit" :: Maybe (MetricUnit) }) -> CustomizedScalingMetricSpecification
 ```
 
 Constructs CustomizedScalingMetricSpecification's fields from required parameters
@@ -256,7 +256,7 @@ Encode DeleteScalingPlanResponse
 
 ``` purescript
 newtype DescribeScalingPlanResourcesRequest
-  = DescribeScalingPlanResourcesRequest { "ScalingPlanName" :: ScalingPlanName, "ScalingPlanVersion" :: ScalingPlanVersion, "MaxResults" :: NullOrUndefined (MaxResults), "NextToken" :: NullOrUndefined (NextToken) }
+  = DescribeScalingPlanResourcesRequest { "ScalingPlanName" :: ScalingPlanName, "ScalingPlanVersion" :: ScalingPlanVersion, "MaxResults" :: Maybe (MaxResults), "NextToken" :: Maybe (NextToken) }
 ```
 
 ##### Instances
@@ -279,7 +279,7 @@ Constructs DescribeScalingPlanResourcesRequest from required parameters
 #### `newDescribeScalingPlanResourcesRequest'`
 
 ``` purescript
-newDescribeScalingPlanResourcesRequest' :: ScalingPlanName -> ScalingPlanVersion -> ({ "ScalingPlanName" :: ScalingPlanName, "ScalingPlanVersion" :: ScalingPlanVersion, "MaxResults" :: NullOrUndefined (MaxResults), "NextToken" :: NullOrUndefined (NextToken) } -> { "ScalingPlanName" :: ScalingPlanName, "ScalingPlanVersion" :: ScalingPlanVersion, "MaxResults" :: NullOrUndefined (MaxResults), "NextToken" :: NullOrUndefined (NextToken) }) -> DescribeScalingPlanResourcesRequest
+newDescribeScalingPlanResourcesRequest' :: ScalingPlanName -> ScalingPlanVersion -> ({ "ScalingPlanName" :: ScalingPlanName, "ScalingPlanVersion" :: ScalingPlanVersion, "MaxResults" :: Maybe (MaxResults), "NextToken" :: Maybe (NextToken) } -> { "ScalingPlanName" :: ScalingPlanName, "ScalingPlanVersion" :: ScalingPlanVersion, "MaxResults" :: Maybe (MaxResults), "NextToken" :: Maybe (NextToken) }) -> DescribeScalingPlanResourcesRequest
 ```
 
 Constructs DescribeScalingPlanResourcesRequest's fields from required parameters
@@ -288,7 +288,7 @@ Constructs DescribeScalingPlanResourcesRequest's fields from required parameters
 
 ``` purescript
 newtype DescribeScalingPlanResourcesResponse
-  = DescribeScalingPlanResourcesResponse { "ScalingPlanResources" :: NullOrUndefined (ScalingPlanResources), "NextToken" :: NullOrUndefined (NextToken) }
+  = DescribeScalingPlanResourcesResponse { "ScalingPlanResources" :: Maybe (ScalingPlanResources), "NextToken" :: Maybe (NextToken) }
 ```
 
 ##### Instances
@@ -311,7 +311,7 @@ Constructs DescribeScalingPlanResourcesResponse from required parameters
 #### `newDescribeScalingPlanResourcesResponse'`
 
 ``` purescript
-newDescribeScalingPlanResourcesResponse' :: ({ "ScalingPlanResources" :: NullOrUndefined (ScalingPlanResources), "NextToken" :: NullOrUndefined (NextToken) } -> { "ScalingPlanResources" :: NullOrUndefined (ScalingPlanResources), "NextToken" :: NullOrUndefined (NextToken) }) -> DescribeScalingPlanResourcesResponse
+newDescribeScalingPlanResourcesResponse' :: ({ "ScalingPlanResources" :: Maybe (ScalingPlanResources), "NextToken" :: Maybe (NextToken) } -> { "ScalingPlanResources" :: Maybe (ScalingPlanResources), "NextToken" :: Maybe (NextToken) }) -> DescribeScalingPlanResourcesResponse
 ```
 
 Constructs DescribeScalingPlanResourcesResponse's fields from required parameters
@@ -320,7 +320,7 @@ Constructs DescribeScalingPlanResourcesResponse's fields from required parameter
 
 ``` purescript
 newtype DescribeScalingPlansRequest
-  = DescribeScalingPlansRequest { "ScalingPlanNames" :: NullOrUndefined (ScalingPlanNames), "ScalingPlanVersion" :: NullOrUndefined (ScalingPlanVersion), "ApplicationSources" :: NullOrUndefined (ApplicationSources), "MaxResults" :: NullOrUndefined (MaxResults), "NextToken" :: NullOrUndefined (NextToken) }
+  = DescribeScalingPlansRequest { "ScalingPlanNames" :: Maybe (ScalingPlanNames), "ScalingPlanVersion" :: Maybe (ScalingPlanVersion), "ApplicationSources" :: Maybe (ApplicationSources), "MaxResults" :: Maybe (MaxResults), "NextToken" :: Maybe (NextToken) }
 ```
 
 ##### Instances
@@ -343,7 +343,7 @@ Constructs DescribeScalingPlansRequest from required parameters
 #### `newDescribeScalingPlansRequest'`
 
 ``` purescript
-newDescribeScalingPlansRequest' :: ({ "ScalingPlanNames" :: NullOrUndefined (ScalingPlanNames), "ScalingPlanVersion" :: NullOrUndefined (ScalingPlanVersion), "ApplicationSources" :: NullOrUndefined (ApplicationSources), "MaxResults" :: NullOrUndefined (MaxResults), "NextToken" :: NullOrUndefined (NextToken) } -> { "ScalingPlanNames" :: NullOrUndefined (ScalingPlanNames), "ScalingPlanVersion" :: NullOrUndefined (ScalingPlanVersion), "ApplicationSources" :: NullOrUndefined (ApplicationSources), "MaxResults" :: NullOrUndefined (MaxResults), "NextToken" :: NullOrUndefined (NextToken) }) -> DescribeScalingPlansRequest
+newDescribeScalingPlansRequest' :: ({ "ScalingPlanNames" :: Maybe (ScalingPlanNames), "ScalingPlanVersion" :: Maybe (ScalingPlanVersion), "ApplicationSources" :: Maybe (ApplicationSources), "MaxResults" :: Maybe (MaxResults), "NextToken" :: Maybe (NextToken) } -> { "ScalingPlanNames" :: Maybe (ScalingPlanNames), "ScalingPlanVersion" :: Maybe (ScalingPlanVersion), "ApplicationSources" :: Maybe (ApplicationSources), "MaxResults" :: Maybe (MaxResults), "NextToken" :: Maybe (NextToken) }) -> DescribeScalingPlansRequest
 ```
 
 Constructs DescribeScalingPlansRequest's fields from required parameters
@@ -352,7 +352,7 @@ Constructs DescribeScalingPlansRequest's fields from required parameters
 
 ``` purescript
 newtype DescribeScalingPlansResponse
-  = DescribeScalingPlansResponse { "ScalingPlans" :: NullOrUndefined (ScalingPlans), "NextToken" :: NullOrUndefined (NextToken) }
+  = DescribeScalingPlansResponse { "ScalingPlans" :: Maybe (ScalingPlans), "NextToken" :: Maybe (NextToken) }
 ```
 
 ##### Instances
@@ -375,7 +375,7 @@ Constructs DescribeScalingPlansResponse from required parameters
 #### `newDescribeScalingPlansResponse'`
 
 ``` purescript
-newDescribeScalingPlansResponse' :: ({ "ScalingPlans" :: NullOrUndefined (ScalingPlans), "NextToken" :: NullOrUndefined (NextToken) } -> { "ScalingPlans" :: NullOrUndefined (ScalingPlans), "NextToken" :: NullOrUndefined (NextToken) }) -> DescribeScalingPlansResponse
+newDescribeScalingPlansResponse' :: ({ "ScalingPlans" :: Maybe (ScalingPlans), "NextToken" :: Maybe (NextToken) } -> { "ScalingPlans" :: Maybe (ScalingPlans), "NextToken" :: Maybe (NextToken) }) -> DescribeScalingPlansResponse
 ```
 
 Constructs DescribeScalingPlansResponse's fields from required parameters
@@ -416,7 +416,7 @@ Encode ErrorMessage
 
 ``` purescript
 newtype InternalServiceException
-  = InternalServiceException { "Message" :: NullOrUndefined (ErrorMessage) }
+  = InternalServiceException { "Message" :: Maybe (ErrorMessage) }
 ```
 
 <p>The service encountered an internal error.</p>
@@ -441,7 +441,7 @@ Constructs InternalServiceException from required parameters
 #### `newInternalServiceException'`
 
 ``` purescript
-newInternalServiceException' :: ({ "Message" :: NullOrUndefined (ErrorMessage) } -> { "Message" :: NullOrUndefined (ErrorMessage) }) -> InternalServiceException
+newInternalServiceException' :: ({ "Message" :: Maybe (ErrorMessage) } -> { "Message" :: Maybe (ErrorMessage) }) -> InternalServiceException
 ```
 
 Constructs InternalServiceException's fields from required parameters
@@ -450,7 +450,7 @@ Constructs InternalServiceException's fields from required parameters
 
 ``` purescript
 newtype InvalidNextTokenException
-  = InvalidNextTokenException { "Message" :: NullOrUndefined (ErrorMessage) }
+  = InvalidNextTokenException { "Message" :: Maybe (ErrorMessage) }
 ```
 
 <p>The token provided is not valid.</p>
@@ -475,7 +475,7 @@ Constructs InvalidNextTokenException from required parameters
 #### `newInvalidNextTokenException'`
 
 ``` purescript
-newInvalidNextTokenException' :: ({ "Message" :: NullOrUndefined (ErrorMessage) } -> { "Message" :: NullOrUndefined (ErrorMessage) }) -> InvalidNextTokenException
+newInvalidNextTokenException' :: ({ "Message" :: Maybe (ErrorMessage) } -> { "Message" :: Maybe (ErrorMessage) }) -> InvalidNextTokenException
 ```
 
 Constructs InvalidNextTokenException's fields from required parameters
@@ -484,7 +484,7 @@ Constructs InvalidNextTokenException's fields from required parameters
 
 ``` purescript
 newtype LimitExceededException
-  = LimitExceededException { "Message" :: NullOrUndefined (ErrorMessage) }
+  = LimitExceededException { "Message" :: Maybe (ErrorMessage) }
 ```
 
 <p>Your account exceeded a limit. This exception is thrown when a per-account resource limit is exceeded.</p>
@@ -509,7 +509,7 @@ Constructs LimitExceededException from required parameters
 #### `newLimitExceededException'`
 
 ``` purescript
-newLimitExceededException' :: ({ "Message" :: NullOrUndefined (ErrorMessage) } -> { "Message" :: NullOrUndefined (ErrorMessage) }) -> LimitExceededException
+newLimitExceededException' :: ({ "Message" :: Maybe (ErrorMessage) } -> { "Message" :: Maybe (ErrorMessage) }) -> LimitExceededException
 ```
 
 Constructs LimitExceededException's fields from required parameters
@@ -712,7 +712,7 @@ Encode NextToken
 
 ``` purescript
 newtype ObjectNotFoundException
-  = ObjectNotFoundException { "Message" :: NullOrUndefined (ErrorMessage) }
+  = ObjectNotFoundException { "Message" :: Maybe (ErrorMessage) }
 ```
 
 <p>The specified object could not be found.</p>
@@ -737,7 +737,7 @@ Constructs ObjectNotFoundException from required parameters
 #### `newObjectNotFoundException'`
 
 ``` purescript
-newObjectNotFoundException' :: ({ "Message" :: NullOrUndefined (ErrorMessage) } -> { "Message" :: NullOrUndefined (ErrorMessage) }) -> ObjectNotFoundException
+newObjectNotFoundException' :: ({ "Message" :: Maybe (ErrorMessage) } -> { "Message" :: Maybe (ErrorMessage) }) -> ObjectNotFoundException
 ```
 
 Constructs ObjectNotFoundException's fields from required parameters
@@ -778,7 +778,7 @@ Encode PolicyType
 
 ``` purescript
 newtype PredefinedScalingMetricSpecification
-  = PredefinedScalingMetricSpecification { "PredefinedScalingMetricType" :: ScalingMetricType, "ResourceLabel" :: NullOrUndefined (ResourceLabel) }
+  = PredefinedScalingMetricSpecification { "PredefinedScalingMetricType" :: ScalingMetricType, "ResourceLabel" :: Maybe (ResourceLabel) }
 ```
 
 <p>Represents a predefined metric for a target tracking policy.</p>
@@ -803,7 +803,7 @@ Constructs PredefinedScalingMetricSpecification from required parameters
 #### `newPredefinedScalingMetricSpecification'`
 
 ``` purescript
-newPredefinedScalingMetricSpecification' :: ScalingMetricType -> ({ "PredefinedScalingMetricType" :: ScalingMetricType, "ResourceLabel" :: NullOrUndefined (ResourceLabel) } -> { "PredefinedScalingMetricType" :: ScalingMetricType, "ResourceLabel" :: NullOrUndefined (ResourceLabel) }) -> PredefinedScalingMetricSpecification
+newPredefinedScalingMetricSpecification' :: ScalingMetricType -> ({ "PredefinedScalingMetricType" :: ScalingMetricType, "ResourceLabel" :: Maybe (ResourceLabel) } -> { "PredefinedScalingMetricType" :: ScalingMetricType, "ResourceLabel" :: Maybe (ResourceLabel) }) -> PredefinedScalingMetricSpecification
 ```
 
 Constructs PredefinedScalingMetricSpecification's fields from required parameters
@@ -942,7 +942,7 @@ Encode ScalingMetricType
 
 ``` purescript
 newtype ScalingPlan
-  = ScalingPlan { "ScalingPlanName" :: ScalingPlanName, "ScalingPlanVersion" :: ScalingPlanVersion, "ApplicationSource" :: ApplicationSource, "ScalingInstructions" :: ScalingInstructions, "StatusCode" :: ScalingPlanStatusCode, "StatusMessage" :: NullOrUndefined (XmlString), "CreationTime" :: NullOrUndefined (TimestampType) }
+  = ScalingPlan { "ScalingPlanName" :: ScalingPlanName, "ScalingPlanVersion" :: ScalingPlanVersion, "ApplicationSource" :: ApplicationSource, "ScalingInstructions" :: ScalingInstructions, "StatusCode" :: ScalingPlanStatusCode, "StatusMessage" :: Maybe (XmlString), "CreationTime" :: Maybe (TimestampType) }
 ```
 
 <p>Represents a scaling plan.</p>
@@ -967,7 +967,7 @@ Constructs ScalingPlan from required parameters
 #### `newScalingPlan'`
 
 ``` purescript
-newScalingPlan' :: ApplicationSource -> ScalingInstructions -> ScalingPlanName -> ScalingPlanVersion -> ScalingPlanStatusCode -> ({ "ScalingPlanName" :: ScalingPlanName, "ScalingPlanVersion" :: ScalingPlanVersion, "ApplicationSource" :: ApplicationSource, "ScalingInstructions" :: ScalingInstructions, "StatusCode" :: ScalingPlanStatusCode, "StatusMessage" :: NullOrUndefined (XmlString), "CreationTime" :: NullOrUndefined (TimestampType) } -> { "ScalingPlanName" :: ScalingPlanName, "ScalingPlanVersion" :: ScalingPlanVersion, "ApplicationSource" :: ApplicationSource, "ScalingInstructions" :: ScalingInstructions, "StatusCode" :: ScalingPlanStatusCode, "StatusMessage" :: NullOrUndefined (XmlString), "CreationTime" :: NullOrUndefined (TimestampType) }) -> ScalingPlan
+newScalingPlan' :: ApplicationSource -> ScalingInstructions -> ScalingPlanName -> ScalingPlanVersion -> ScalingPlanStatusCode -> ({ "ScalingPlanName" :: ScalingPlanName, "ScalingPlanVersion" :: ScalingPlanVersion, "ApplicationSource" :: ApplicationSource, "ScalingInstructions" :: ScalingInstructions, "StatusCode" :: ScalingPlanStatusCode, "StatusMessage" :: Maybe (XmlString), "CreationTime" :: Maybe (TimestampType) } -> { "ScalingPlanName" :: ScalingPlanName, "ScalingPlanVersion" :: ScalingPlanVersion, "ApplicationSource" :: ApplicationSource, "ScalingInstructions" :: ScalingInstructions, "StatusCode" :: ScalingPlanStatusCode, "StatusMessage" :: Maybe (XmlString), "CreationTime" :: Maybe (TimestampType) }) -> ScalingPlan
 ```
 
 Constructs ScalingPlan's fields from required parameters
@@ -1008,7 +1008,7 @@ Encode ScalingPlanNames
 
 ``` purescript
 newtype ScalingPlanResource
-  = ScalingPlanResource { "ScalingPlanName" :: ScalingPlanName, "ScalingPlanVersion" :: ScalingPlanVersion, "ServiceNamespace" :: ServiceNamespace, "ResourceId" :: ResourceIdMaxLen1600, "ScalableDimension" :: ScalableDimension, "ScalingPolicies" :: NullOrUndefined (ScalingPolicies), "ScalingStatusCode" :: ScalingStatusCode, "ScalingStatusMessage" :: NullOrUndefined (XmlString) }
+  = ScalingPlanResource { "ScalingPlanName" :: ScalingPlanName, "ScalingPlanVersion" :: ScalingPlanVersion, "ServiceNamespace" :: ServiceNamespace, "ResourceId" :: ResourceIdMaxLen1600, "ScalableDimension" :: ScalableDimension, "ScalingPolicies" :: Maybe (ScalingPolicies), "ScalingStatusCode" :: ScalingStatusCode, "ScalingStatusMessage" :: Maybe (XmlString) }
 ```
 
 <p>Represents a scalable resource.</p>
@@ -1033,7 +1033,7 @@ Constructs ScalingPlanResource from required parameters
 #### `newScalingPlanResource'`
 
 ``` purescript
-newScalingPlanResource' :: ResourceIdMaxLen1600 -> ScalableDimension -> ScalingPlanName -> ScalingPlanVersion -> ScalingStatusCode -> ServiceNamespace -> ({ "ScalingPlanName" :: ScalingPlanName, "ScalingPlanVersion" :: ScalingPlanVersion, "ServiceNamespace" :: ServiceNamespace, "ResourceId" :: ResourceIdMaxLen1600, "ScalableDimension" :: ScalableDimension, "ScalingPolicies" :: NullOrUndefined (ScalingPolicies), "ScalingStatusCode" :: ScalingStatusCode, "ScalingStatusMessage" :: NullOrUndefined (XmlString) } -> { "ScalingPlanName" :: ScalingPlanName, "ScalingPlanVersion" :: ScalingPlanVersion, "ServiceNamespace" :: ServiceNamespace, "ResourceId" :: ResourceIdMaxLen1600, "ScalableDimension" :: ScalableDimension, "ScalingPolicies" :: NullOrUndefined (ScalingPolicies), "ScalingStatusCode" :: ScalingStatusCode, "ScalingStatusMessage" :: NullOrUndefined (XmlString) }) -> ScalingPlanResource
+newScalingPlanResource' :: ResourceIdMaxLen1600 -> ScalableDimension -> ScalingPlanName -> ScalingPlanVersion -> ScalingStatusCode -> ServiceNamespace -> ({ "ScalingPlanName" :: ScalingPlanName, "ScalingPlanVersion" :: ScalingPlanVersion, "ServiceNamespace" :: ServiceNamespace, "ResourceId" :: ResourceIdMaxLen1600, "ScalableDimension" :: ScalableDimension, "ScalingPolicies" :: Maybe (ScalingPolicies), "ScalingStatusCode" :: ScalingStatusCode, "ScalingStatusMessage" :: Maybe (XmlString) } -> { "ScalingPlanName" :: ScalingPlanName, "ScalingPlanVersion" :: ScalingPlanVersion, "ServiceNamespace" :: ServiceNamespace, "ResourceId" :: ResourceIdMaxLen1600, "ScalableDimension" :: ScalableDimension, "ScalingPolicies" :: Maybe (ScalingPolicies), "ScalingStatusCode" :: ScalingStatusCode, "ScalingStatusMessage" :: Maybe (XmlString) }) -> ScalingPlanResource
 ```
 
 Constructs ScalingPlanResource's fields from required parameters
@@ -1122,7 +1122,7 @@ Encode ScalingPolicies
 
 ``` purescript
 newtype ScalingPolicy
-  = ScalingPolicy { "PolicyName" :: PolicyName, "PolicyType" :: PolicyType, "TargetTrackingConfiguration" :: NullOrUndefined (TargetTrackingConfiguration) }
+  = ScalingPolicy { "PolicyName" :: PolicyName, "PolicyType" :: PolicyType, "TargetTrackingConfiguration" :: Maybe (TargetTrackingConfiguration) }
 ```
 
 <p>Represents a scaling policy.</p>
@@ -1147,7 +1147,7 @@ Constructs ScalingPolicy from required parameters
 #### `newScalingPolicy'`
 
 ``` purescript
-newScalingPolicy' :: PolicyName -> PolicyType -> ({ "PolicyName" :: PolicyName, "PolicyType" :: PolicyType, "TargetTrackingConfiguration" :: NullOrUndefined (TargetTrackingConfiguration) } -> { "PolicyName" :: PolicyName, "PolicyType" :: PolicyType, "TargetTrackingConfiguration" :: NullOrUndefined (TargetTrackingConfiguration) }) -> ScalingPolicy
+newScalingPolicy' :: PolicyName -> PolicyType -> ({ "PolicyName" :: PolicyName, "PolicyType" :: PolicyType, "TargetTrackingConfiguration" :: Maybe (TargetTrackingConfiguration) } -> { "PolicyName" :: PolicyName, "PolicyType" :: PolicyType, "TargetTrackingConfiguration" :: Maybe (TargetTrackingConfiguration) }) -> ScalingPolicy
 ```
 
 Constructs ScalingPolicy's fields from required parameters
@@ -1188,7 +1188,7 @@ Encode ServiceNamespace
 
 ``` purescript
 newtype TargetTrackingConfiguration
-  = TargetTrackingConfiguration { "PredefinedScalingMetricSpecification" :: NullOrUndefined (PredefinedScalingMetricSpecification), "CustomizedScalingMetricSpecification" :: NullOrUndefined (CustomizedScalingMetricSpecification), "TargetValue" :: MetricScale, "DisableScaleIn" :: NullOrUndefined (DisableScaleIn), "ScaleOutCooldown" :: NullOrUndefined (Cooldown), "ScaleInCooldown" :: NullOrUndefined (Cooldown), "EstimatedInstanceWarmup" :: NullOrUndefined (Cooldown) }
+  = TargetTrackingConfiguration { "PredefinedScalingMetricSpecification" :: Maybe (PredefinedScalingMetricSpecification), "CustomizedScalingMetricSpecification" :: Maybe (CustomizedScalingMetricSpecification), "TargetValue" :: MetricScale, "DisableScaleIn" :: Maybe (DisableScaleIn), "ScaleOutCooldown" :: Maybe (Cooldown), "ScaleInCooldown" :: Maybe (Cooldown), "EstimatedInstanceWarmup" :: Maybe (Cooldown) }
 ```
 
 <p>Represents a target tracking scaling policy.</p>
@@ -1213,7 +1213,7 @@ Constructs TargetTrackingConfiguration from required parameters
 #### `newTargetTrackingConfiguration'`
 
 ``` purescript
-newTargetTrackingConfiguration' :: MetricScale -> ({ "PredefinedScalingMetricSpecification" :: NullOrUndefined (PredefinedScalingMetricSpecification), "CustomizedScalingMetricSpecification" :: NullOrUndefined (CustomizedScalingMetricSpecification), "TargetValue" :: MetricScale, "DisableScaleIn" :: NullOrUndefined (DisableScaleIn), "ScaleOutCooldown" :: NullOrUndefined (Cooldown), "ScaleInCooldown" :: NullOrUndefined (Cooldown), "EstimatedInstanceWarmup" :: NullOrUndefined (Cooldown) } -> { "PredefinedScalingMetricSpecification" :: NullOrUndefined (PredefinedScalingMetricSpecification), "CustomizedScalingMetricSpecification" :: NullOrUndefined (CustomizedScalingMetricSpecification), "TargetValue" :: MetricScale, "DisableScaleIn" :: NullOrUndefined (DisableScaleIn), "ScaleOutCooldown" :: NullOrUndefined (Cooldown), "ScaleInCooldown" :: NullOrUndefined (Cooldown), "EstimatedInstanceWarmup" :: NullOrUndefined (Cooldown) }) -> TargetTrackingConfiguration
+newTargetTrackingConfiguration' :: MetricScale -> ({ "PredefinedScalingMetricSpecification" :: Maybe (PredefinedScalingMetricSpecification), "CustomizedScalingMetricSpecification" :: Maybe (CustomizedScalingMetricSpecification), "TargetValue" :: MetricScale, "DisableScaleIn" :: Maybe (DisableScaleIn), "ScaleOutCooldown" :: Maybe (Cooldown), "ScaleInCooldown" :: Maybe (Cooldown), "EstimatedInstanceWarmup" :: Maybe (Cooldown) } -> { "PredefinedScalingMetricSpecification" :: Maybe (PredefinedScalingMetricSpecification), "CustomizedScalingMetricSpecification" :: Maybe (CustomizedScalingMetricSpecification), "TargetValue" :: MetricScale, "DisableScaleIn" :: Maybe (DisableScaleIn), "ScaleOutCooldown" :: Maybe (Cooldown), "ScaleInCooldown" :: Maybe (Cooldown), "EstimatedInstanceWarmup" :: Maybe (Cooldown) }) -> TargetTrackingConfiguration
 ```
 
 Constructs TargetTrackingConfiguration's fields from required parameters
@@ -1254,7 +1254,7 @@ Encode TimestampType
 
 ``` purescript
 newtype ValidationException
-  = ValidationException { "Message" :: NullOrUndefined (ErrorMessage) }
+  = ValidationException { "Message" :: Maybe (ErrorMessage) }
 ```
 
 <p>An exception was thrown for a validation issue. Review the parameters provided.</p>
@@ -1279,7 +1279,7 @@ Constructs ValidationException from required parameters
 #### `newValidationException'`
 
 ``` purescript
-newValidationException' :: ({ "Message" :: NullOrUndefined (ErrorMessage) } -> { "Message" :: NullOrUndefined (ErrorMessage) }) -> ValidationException
+newValidationException' :: ({ "Message" :: Maybe (ErrorMessage) } -> { "Message" :: Maybe (ErrorMessage) }) -> ValidationException
 ```
 
 Constructs ValidationException's fields from required parameters
